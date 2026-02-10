@@ -6,6 +6,6 @@ jobs:
       - codebuild-Github-Runners-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - run: echo "Hello World"
-      - run: nslookup test.exampleankur.com
-      - run: curl -v -k --connect-timeout 10 http://test.exampleankur.com
       - run: cat /etc/resolv.conf
+      - run: curl -v -k --connect-timeout 10 http://test.exampleankur.com
+      - run: nslookup test.exampleankur.com
