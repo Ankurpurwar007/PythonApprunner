@@ -3,9 +3,9 @@ on: [push]
 jobs:
   Hello-World-Job:
     runs-on:
-      - codebuild-GithubActionRunner-${{ github.run_id }}-${{ github.run_attempt }}
-        buildspec-override:true
+      - codebuild-Github-Runners-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-      - run: echo "Hello World1"
-      - run: codebuild-breakpoint
-      - run: ls -a
+      - run: echo "Hello World"
+      - nslookup test.exampleankur.com
+      - curl -v -k --connect-timeout 10 http://test.exampleankur.com
+      - cat /etc/resolv.conf
